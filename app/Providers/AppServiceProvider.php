@@ -20,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        //SQL log
         DB::listen(function($query) {
             echo $query->sql."<br>\n-----------------------\n";
         });
